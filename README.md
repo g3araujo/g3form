@@ -1,39 +1,49 @@
-## Anotação curso terraform ##
+# Anotação curso terraform
+Um produto **hashicorp**
 
-# 0. formatando codigo
+## Passos vistos:
+- formatando codigo
+```bash
 terraform fmt
+```
 
-# 1. init no profile g3araujo
+- init no profile g3araujo
+```bash
 terraform init -backend-config="profile=g3araujo"
-
-# 2. plan
+```
+- plan
+```bash
 terraform plan
-
-# 3. apply
+```
+- apply
+```bash
 terraform apply
-
-# 4. alterando: mudar o codigo e 
+```
+- alterando: mudar o codigo e para verificar o que vai ser modificado
+```bash
 terraform plan
-# para verificar o que vai ser modificado
-
-# 5. destruir
+```
+- destruir
+```bash
 terraform destroy
-
-# 6. mostrar
+```
+- mostrar
+```bash
 terraform show
-
-# 7. taint
-# para forçar que um recurso seja sempre destruido e reconstruido
+```
+- taint: para forçar que um recurso seja sempre destruido e reconstruido
+```bash
 terraform taint aws_s3_bucket_object.object 
-ou
+```
+ou para desmarcar o taint
+```bash
 terraform untaint aws_s3_bucket_object.object 
-# para desmarcar o taint
-
-# 8. console
+```
+- console
+```bash
 terraform console
-# Outra forma de expor o show
-
-# 9. output
-# no codigo vc define o que vc quer que apareça no final do apply
+```
+- Outra forma de expor o show é **output** <br>
+O codigo vc define o que vc quer que apareça no final do apply
 
 
