@@ -2,16 +2,16 @@
 Um produto **hashicorp**
 
 ## Passos vistos:
-- formatando codigo
+- Formatando código: não se preocupe com o formato do seu código, depois de digitá-lo execute o comando abaixo e ele vai organizá-lo automaticamente
 ```bash
 terraform fmt
 ```
 
-- init no profile g3araujo
+- Iniciando no profile AWS
 ```bash
 terraform init -backend-config="profile=g3araujo"
 ```
-- plan
+- Lista 
 ```bash
 terraform plan
 ```
