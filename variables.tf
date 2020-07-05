@@ -11,7 +11,9 @@ variable "ami" {
   default = "ami-09d95fab7fff3776c"
 }
 
-variable "type" {}
+variable "type" {
+  default = "t2.micro"
+}
 
 variable "ips" {
   type    = "list"

@@ -46,4 +46,11 @@ terraform console
 - Outra forma de expor o show é **output** <br>
 O codigo vc define o que vc quer que apareça no final do apply
 
-
+- get: baixa os modulos do condigo, quando rodar o init ele não vai baixar
+```bash
+terraform get
+```
+- import: baixa os modulos do condigo, quando rodar o init ele não vai baixar
+```bash
+terraform import
+```

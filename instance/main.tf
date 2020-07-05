@@ -1,6 +1,6 @@
 provider "aws" {
-    region = "${var.region}"
-    profile = "${var.profile}"
+  region  = "${var.region}"
+  profile = "${var.profile}"
 }
 
 resource "aws_instance" "linux-64b" {

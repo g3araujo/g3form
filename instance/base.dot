@@ -1,0 +1,20 @@
+digraph {
+	compound = "true"
+	newrank = "true"
+	subgraph "root" {
+		"[root] aws_instance.linux-64b" [label = "aws_instance.linux-64b", shape = "box"]
+		"[root] provider.aws" [label = "provider.aws", shape = "diamond"]
+		"[root] aws_instance.linux-64b" -> "[root] provider.aws"
+		"[root] aws_instance.linux-64b" -> "[root] var.ami"
+		"[root] aws_instance.linux-64b" -> "[root] var.tags"
+		"[root] aws_instance.linux-64b" -> "[root] var.type"
+		"[root] meta.count-boundary (count boundary fixup)" -> "[root] aws_instance.linux-64b"
+		"[root] meta.count-boundary (count boundary fixup)" -> "[root] var.ips"
+		"[root] provider.aws (close)" -> "[root] aws_instance.linux-64b"
+		"[root] provider.aws" -> "[root] var.profile"
+		"[root] provider.aws" -> "[root] var.region"
+		"[root] root" -> "[root] meta.count-boundary (count boundary fixup)"
+		"[root] root" -> "[root] provider.aws (close)"
+	}
+}
+
